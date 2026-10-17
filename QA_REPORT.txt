@@ -1,0 +1,20 @@
+OMIKA COUTURE — SAMPLE 3 ATELIER SIGNATURE
+Static QA report for the delivery package
+
+PASS
+- JavaScript syntax check: passed with Node.js --check.
+- Local asset references: no missing image, poster, or video source paths found.
+- Internal anchor references: no broken in-page targets found.
+- HTML IDs: no duplicate IDs found.
+- Images: 16 <img> elements; every image has an alt attribute (the modal image is intentionally empty-alt until a look is opened).
+- Videos: 4 compressed H.264 portrait clips; 432 x 768 resolution.
+- Responsive review: CSS includes desktop, tablet, mobile, and narrow-mobile breakpoints; mobile navigation and reduced-motion behaviour are implemented.
+- Interaction code: collection filters, search, quick-look modal, save/remove saved looks, empty-bag drawer, modal Escape close and mobile-menu Escape close are implemented in the front end.
+- Image framing: catalogue image containers now match the original portrait aspect ratio; images use contain rather than zoom-cropping.
+- Deployment safety: package includes only sample3/ plus documentation. Root index.html, root CNAME, and sample2/ are not included.
+
+LIMITATION
+An automated live-browser screenshot run was not available in this runtime because the managed Chromium browser blocked local navigation. The package was therefore checked with static HTML/asset/anchor/ID checks and JavaScript syntax validation. Re-test visual rendering after deployment in Chrome, Safari and mobile Safari before production launch.
+
+PRODUCTION READINESS
+This is a front-end prototype, not a live ecommerce backend. Real catalogue data, prices, variants, inventory, cart/checkout, payment gateway, shipping, customer accounts, newsletter capture and approved legal policies must be integrated before accepting orders. Payment marks are placeholders pending gateway confirmation. The sample page uses noindex,follow while it remains a preview route.

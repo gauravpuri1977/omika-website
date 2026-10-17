@@ -1,0 +1,94 @@
+{
+  "title": "Omika Couture \u2014 Dress for the Way You Feel",
+  "robots": "noindex,follow",
+  "missing_local_assets": [],
+  "duplicate_ids": [],
+  "broken_internal_anchors": [],
+  "images_missing_alt_attribute": [],
+  "js_syntax_check_passed": true,
+  "js_syntax_error": "",
+  "image_count": 16,
+  "video_count": 4,
+  "assets": 22,
+  "image_dimensions": {
+    "category-bestsellers.jpg": [
+      1100,
+      1555
+    ],
+    "category-drapes.jpg": [
+      1100,
+      1555
+    ],
+    "category-festive-edit.jpg": [
+      1100,
+      1557
+    ],
+    "category-new-arrivals.jpg": [
+      1100,
+      1556
+    ],
+    "category-ready-to-wear.jpg": [
+      1100,
+      1556
+    ],
+    "category-wedding.jpg": [
+      1100,
+      1557
+    ],
+    "category-womens.jpg": [
+      1100,
+      1555
+    ],
+    "collection-adah.jpg": [
+      1100,
+      1556
+    ],
+    "collection-rasika.jpg": [
+      1100,
+      1557
+    ],
+    "edit-celebrity.jpg": [
+      1100,
+      1556
+    ],
+    "edit-influencer.jpg": [
+      1100,
+      1555
+    ],
+    "editorial-story.jpg": [
+      1100,
+      1556
+    ],
+    "hero-portrait-fit.jpg": [
+      1100,
+      1556
+    ],
+    "omika-logo-transparent.png": [
+      1136,
+      280
+    ],
+    "poster-details.jpg": [
+      540,
+      960
+    ],
+    "poster-entrance.jpg": [
+      540,
+      960
+    ],
+    "poster-feeling.jpg": [
+      540,
+      960
+    ],
+    "poster-silhouette.jpg": [
+      540,
+      960
+    ]
+  },
+  "file_sizes_bytes": {
+    "index.html": 76571,
+    "film-silhouette.mp4": 1963892,
+    "film-details.mp4": 1191077,
+    "film-feeling.mp4": 1960825,
+    "film-entrance.mp4": 2084965
+  }
+}

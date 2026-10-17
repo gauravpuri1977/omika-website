@@ -1,9 +1,1 @@
-OMIKA SAMPLE3 — DEPLOYMENT NOTES
-
-Package layout:
-  sample3/index.html
-  sample3/assets/*
-
-Upload the contents of the `sample3` directory to a `sample3` directory in the existing GitHub Pages repository. Do not overwrite the root index.html or CNAME. The expected URL is https://omikacoutures.com/sample3/.
-
-No build command is required. Keep the assets directory beside index.html so the relative asset URLs resolve correctly.
+Upload only the included sample3/ directory to the existing GitHub Pages publishing root. Keep root index.html, root CNAME, and sample2/ untouched. Preview URL: https://omikacoutures.com/sample3/

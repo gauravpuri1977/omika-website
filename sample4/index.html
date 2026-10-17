@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111511">
+<meta name="robots" content="noindex,follow">
+<meta property="og:site_name" content="Omika Couture">
+<title>Omika Couture — Dress for the Way You Feel</title>
+<meta name="description" content="Explore Omika Couture: expressive Indian occasionwear, signature collections, considered detail and silhouettes made for your moments.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Omika Couture — Dress for the Way You Feel">
+<meta property="og:description" content="Expressive colour. Considered craft. Indian occasionwear with a modern point of view.">
+<meta property="og:image" content="https://omikacoutures.com/sample3/assets/category-new-arrivals.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Omika Couture — Dress for the Way You Feel">
+<meta name="twitter:description" content="Expressive colour. Considered craft. Indian occasionwear with a modern point of view.">
+<link rel="preload" as="image" href="assets/poster-silhouette.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111511; --ink-soft:#171d18; --panel:#1d251e; --panel-light:#242d24;
+  --bone:#f3f0e7; --bone-soft:#deded2; --muted:#a8afa2; --sage:#c2cfb5;
+  --sage-deep:#87977e; --line:rgba(194,207,181,.18); --line-strong:rgba(194,207,181,.38);
+  --serif:'Italiana',Georgia,serif; --sans:'DM Sans',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%}img{color:transparent}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}::selection{background:var(--sage);color:var(--ink)}
+.announcement{min-height:30px;padding:7px 14px;display:flex;justify-content:center;align-items:center;gap:9px;background:var(--sage);color:#182018;font-size:9px;letter-spacing:.13em;text-transform:uppercase;text-align:center}
+.announcement a{font-weight:700;border-bottom:1px solid rgba(24,32,24,.45)}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(17,21,17,.96);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{width:min(1500px,calc(100% - 72px));height:84px;margin:auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
+.nav-group{display:flex;align-items:center;gap:clamp(14px,2vw,28px);white-space:nowrap}
+.nav-group a{position:relative;padding:9px 0;color:#d5d8cd;font-size:9px;letter-spacing:.11em;text-transform:uppercase;transition:color .2s}
+.nav-group a:after{content:'';position:absolute;left:0;right:100%;bottom:3px;height:1px;background:var(--sage);transition:right .25s}
+.nav-group a:hover{color:var(--sage)}.nav-group a:hover:after{right:0}.nav-group.right{justify-content:flex-end;gap:17px}
+.brand{display:flex;align-items:center;justify-content:center;width:180px;min-width:130px}.brand img{display:block;width:174px;height:auto;max-height:48px;object-fit:contain}.brand-fallback{display:none;font-family:var(--serif);font-size:30px;letter-spacing:.04em;color:var(--bone)}
+.icon-button{width:31px;height:31px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:0;background:transparent;color:var(--bone)}.icon-button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+.menu-button{display:none}.mobile-menu{display:none;background:var(--ink-soft);border-top:1px solid var(--line);padding:12px 24px 20px}.mobile-menu.open{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.mobile-menu a{padding:14px 0;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--bone-soft)}
+.search-panel{display:none;align-items:center;gap:14px;padding:15px max(24px,calc((100% - 1200px)/2));background:var(--ink-soft);border-top:1px solid var(--line)}.search-panel.open{display:flex}.search-panel input{flex:1;min-width:0;background:transparent;border:0;border-bottom:1px solid var(--sage-deep);padding:12px 2px;color:var(--bone);outline:none}.search-panel input::placeholder{color:#899285}.search-panel button{border:1px solid var(--line-strong);background:transparent;color:var(--bone);padding:12px 18px;font-size:9px;letter-spacing:.13em;text-transform:uppercase}
+/* Video-first opening: each clip keeps its native 9:16 frame. */
+.video-runway{width:100%;background:#0b0e0b;overflow:hidden;border-bottom:1px solid var(--line)}
+.video-wall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;aspect-ratio:9/4;overflow:hidden}
+.runway-card{position:relative;min-width:0;min-height:0;overflow:hidden;background:#0b0e0b;isolation:isolate}
+.runway-card video{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:#0b0e0b}
+.runway-card:after{content:'';position:absolute;inset:35% 0 0;background:linear-gradient(180deg,transparent,rgba(7,10,7,.78));pointer-events:none}
+.runway-caption{position:absolute;z-index:2;left:clamp(12px,2vw,28px);right:10px;bottom:clamp(15px,2vw,28px)}
+.runway-caption span{display:block;color:var(--sage);font-size:8px;letter-spacing:.19em;text-transform:uppercase;margin-bottom:7px}
+.runway-caption h2{font:normal clamp(17px,2vw,27px)/1.05 var(--serif);margin:0;color:#fffdf5}
+.runway-mark{position:absolute;z-index:2;top:17px;left:clamp(12px,2vw,28px);color:rgba(245,243,233,.88);font-size:8px;letter-spacing:.17em;text-transform:uppercase}
+.runway-scroll{display:none}
+.intro{width:min(1360px,calc(100% - 72px));margin:auto;padding:58px 0 61px;display:grid;grid-template-columns:1.08fr .92fr;align-items:end;gap:clamp(24px,6vw,90px)}
+.eyebrow,.section-kicker{display:flex;align-items:center;gap:10px;color:var(--sage);font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.eyebrow:before{content:'';width:26px;height:1px;background:var(--sage-deep)}
+h1,.section-title,.signature-copy h3,.feature-copy h3{font-family:var(--serif);font-weight:400}
+h1{font-size:clamp(46px,6.3vw,86px);line-height:.98;letter-spacing:-.035em;margin:19px 0 0;max-width:700px}
+h1 em{font-style:normal;color:var(--sage)}
+.intro-aside{padding:0 0 5px 25px;border-left:1px solid var(--line-strong)}.intro-aside p{max-width:450px;color:var(--muted);font-size:13px;line-height:1.95;margin:0 0 22px}
+.button{min-height:47px;padding:0 22px;display:inline-flex;align-items:center;justify-content:center;gap:13px;border:1px solid transparent;font-size:9px;letter-spacing:.14em;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s}
+.button.primary{background:var(--sage);border-color:var(--sage);color:#151b14}.button.primary:hover{background:#d8e0cf;border-color:#d8e0cf}.button.outline{border-color:var(--line-strong);color:var(--bone)}.button.outline:hover{border-color:var(--sage);color:var(--sage)}.button .arrow{font-size:16px;line-height:1}
+.ticker{overflow:hidden;background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:13px 0;white-space:nowrap}.ticker-track{display:flex;width:max-content;animation:marquee 32s linear infinite}.ticker span{display:inline-flex;align-items:center;gap:24px;padding-right:24px;color:#d8ddcf;font-size:9px;letter-spacing:.2em;text-transform:uppercase}.ticker b{font-size:15px;font-weight:400;color:var(--sage)}@keyframes marquee{to{transform:translateX(-50%)}}
+.section{width:min(1400px,calc(100% - 72px));margin:auto;padding:88px 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:31px}.section-head.center{display:block;text-align:center;max-width:670px;margin:0 auto 38px}.section-kicker{margin-bottom:13px}.section-title{font-size:clamp(34px,4.1vw,56px);line-height:1.05;letter-spacing:-.025em;margin:0;color:var(--bone)}.section-description{max-width:500px;color:var(--muted);font-size:12px;line-height:1.85;margin:13px 0 0}.section-head.center .section-description{margin:13px auto 0}
+.text-link{display:inline-flex;align-items:center;gap:13px;padding-bottom:7px;border-bottom:1px solid var(--sage-deep);color:var(--sage);font-size:9px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}.text-link span{font-size:16px;line-height:.8}
+.arrival-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.shop-card{display:block;min-width:0}.image-frame{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--panel);isolation:isolate}.image-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .65s cubic-bezier(.2,.7,.2,1)}.shop-card:hover .image-frame img,.category-card:hover img,.feature-card:hover img{transform:scale(1.035)}.image-frame:after{content:'';position:absolute;inset:40% 0 0;background:linear-gradient(180deg,transparent,rgba(10,14,10,.28));pointer-events:none}.image-chip{position:absolute;z-index:1;left:12px;top:12px;padding:7px 9px;background:rgba(17,21,17,.82);border:1px solid rgba(194,207,181,.35);color:#e2e8d9;font-size:7px;letter-spacing:.13em;text-transform:uppercase}.card-arrow{position:absolute;z-index:2;right:12px;bottom:12px;width:33px;height:33px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(243,240,231,.72);border-radius:50%;font-size:16px;color:#fffdf5;transition:background .2s,color .2s}.shop-card:hover .card-arrow{background:var(--sage);color:var(--ink);border-color:var(--sage)}
+.shop-info{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 2px 0}.shop-info h3{font:normal 22px/1.08 var(--serif);margin:0;color:var(--bone)}.shop-info p{margin:7px 0 0;color:#929b8c;font-size:8px;letter-spacing:.12em;text-transform:uppercase}.shop-info .simple-arrow{color:var(--sage);font-size:19px}
+.category-section{background:var(--ink-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.category-section .section{padding-top:78px;padding-bottom:80px}.category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.category-card{position:relative;display:block;min-width:0;aspect-ratio:4/5;overflow:hidden;background:var(--panel);isolation:isolate}.category-card img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .65s}.category-card:after{content:'';position:absolute;inset:28% 0 0;background:linear-gradient(180deg,transparent 5%,rgba(9,13,9,.78));pointer-events:none}.category-copy{position:absolute;z-index:2;left:20px;right:20px;bottom:20px}.category-copy span{display:block;color:var(--sage);font-size:8px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px}.category-copy h3{font:normal clamp(22px,2.5vw,32px)/1.05 var(--serif);margin:0;color:#fffdf5}.category-copy p{font-size:10px;line-height:1.65;color:#d6dbd0;margin:9px 0 0;max-width:300px}
+.signature-section{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.signature-card{min-width:0;display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1fr);align-items:stretch;background:var(--panel);border:1px solid var(--line);overflow:hidden}.signature-image{min-width:0;aspect-ratio:4/5;overflow:hidden;background:var(--ink-soft)}.signature-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}.signature-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(18px,2.6vw,38px)}.signature-copy .mini{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:13px}.signature-copy h3{font-size:clamp(29px,3vw,42px);line-height:1;margin:0 0 14px}.signature-copy p{color:var(--muted);font-size:11px;line-height:1.85;margin:0 0 23px;max-width:240px}.signature-copy .text-link{margin-top:auto}
+.style-section{background:#151a15;border-top:1px solid var(--line)}.style-section .section{padding-top:82px;padding-bottom:88px}.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.feature-card{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;background:var(--panel);isolation:isolate}.feature-card img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .65s}.feature-card:after{content:'';position:absolute;inset:30% 0 0;background:linear-gradient(180deg,transparent,rgba(7,11,7,.85));pointer-events:none}.feature-copy{position:absolute;z-index:2;left:clamp(20px,3vw,42px);right:20px;bottom:clamp(22px,3vw,40px)}.feature-copy .mini{font-size:8px;letter-spacing:.17em;text-transform:uppercase;color:var(--sage);margin-bottom:12px}.feature-copy h3{font-size:clamp(30px,4vw,52px);line-height:1.02;margin:0 0 13px}.feature-copy span{display:inline-flex;align-items:center;gap:11px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--sage-deep);padding-bottom:7px;color:var(--bone)}
+.partner-band{width:min(1400px,calc(100% - 72px));margin:0 auto 88px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);background:var(--panel);border:1px solid var(--line);overflow:hidden}.partner-copy{padding:clamp(28px,5vw,72px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.partner-copy h2{font:normal clamp(36px,4.5vw,58px)/1.04 var(--serif);margin:17px 0 17px;max-width:590px}.partner-copy p{color:var(--muted);font-size:12px;line-height:1.9;max-width:520px;margin:0 0 25px}.partner-visual{position:relative;min-height:340px;aspect-ratio:4/5;overflow:hidden;background:var(--ink-soft)}.partner-visual img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}.partner-visual:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--panel),transparent 35%);pointer-events:none}
+.site-footer{background:#0b0e0b;border-top:1px solid var(--line)}.footer-main{width:min(1400px,calc(100% - 72px));margin:auto;padding:58px 0 48px;display:grid;grid-template-columns:1.15fr .8fr .95fr 1.25fr;gap:clamp(24px,4vw,60px)}.footer-brand img{display:block;width:165px;height:auto;object-fit:contain;max-height:44px}.footer-brand p,.footer-newsletter p{font-size:11px;line-height:1.9;color:#929b8d;max-width:270px;margin:18px 0 0}.footer-column h2{font-size:9px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--sage);margin:5px 0 20px}.footer-column ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}.footer-column li a{font-size:10px;color:#c2c8bb;transition:color .2s}.footer-column li a:hover{color:var(--sage)}.newsletter-form{display:flex;align-items:stretch;margin-top:19px;border-bottom:1px solid var(--line-strong)}.newsletter-form input{width:100%;min-width:0;padding:13px 0;background:transparent;border:0;outline:0;color:var(--bone);font-size:10px}.newsletter-form input::placeholder{color:#7e887b}.newsletter-form button{border:0;background:transparent;color:var(--sage);font-size:8px;letter-spacing:.13em;text-transform:uppercase;padding:0 0 0 14px;white-space:nowrap}.newsletter-note{display:none;color:var(--sage);font-size:10px;line-height:1.7;margin-top:12px}.newsletter-note.visible{display:block}.footer-lower{width:min(1400px,calc(100% - 72px));margin:auto;min-height:70px;padding:18px 0;border-top:1px solid rgba(194,207,181,.11);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.payment-logos{display:flex;align-items:center;gap:8px}.pay-logo{min-width:31px;height:20px;padding:0 5px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #586054;border-radius:2px;color:#c9cec3;font-size:7px;font-weight:700;letter-spacing:.02em}.pay-logo.amex{background:#263b45;border-color:#263b45;color:#e8f2f3}.pay-logo.rupay{font-size:6px}.pay-logo.upi{font-size:7px}.master-mark{width:30px;height:20px;position:relative;display:inline-flex;align-items:center;justify-content:center}.master-mark:before,.master-mark:after{content:'';position:absolute;width:15px;height:15px;border-radius:50%;background:#d0d2c8;opacity:.8}.master-mark:before{left:1px}.master-mark:after{right:1px;mix-blend-mode:screen;opacity:.45}.footer-social{display:flex;align-items:center;gap:13px}.footer-social a{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border:1px solid var(--line);border-radius:50%;color:#c6ccbf;transition:background .2s,color .2s}.footer-social a:hover{background:var(--sage);color:var(--ink)}.footer-social svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.copyright{color:#737c70;font-size:9px;letter-spacing:.05em}.toast{position:fixed;z-index:100;left:50%;bottom:24px;transform:translate(-50%,18px);opacity:0;pointer-events:none;max-width:calc(100% - 30px);background:var(--bone);color:var(--ink);padding:13px 18px;font-size:11px;line-height:1.5;box-shadow:0 10px 35px rgba(0,0,0,.25);transition:opacity .2s,transform .2s}.toast.show{opacity:1;transform:translate(-50%,0)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(min-width:1600px){.video-wall{max-height:none}}
+@media(max-width:1050px){.nav{width:calc(100% - 42px);gap:14px}.nav-group{gap:13px}.nav-group a{font-size:8px}.brand{width:145px}.brand img{width:145px}.section,.intro,.partner-band{width:calc(100% - 48px)}.footer-main,.footer-lower{width:calc(100% - 48px)}.signature-card{grid-template-columns:minmax(0,.72fr) minmax(0,1fr)}.signature-copy{padding:21px}.signature-copy p{font-size:10px}.footer-main{grid-template-columns:1fr 1fr;gap:34px}.partner-band{grid-template-columns:1fr .75fr}}
+@media(max-width:760px){
+ .announcement{font-size:8px;letter-spacing:.08em;min-height:29px}.nav{width:calc(100% - 32px);height:70px;grid-template-columns:38px 1fr 38px;gap:8px}.nav-group.desktop{display:none}.menu-button{display:inline-flex}.brand{width:auto;min-width:0}.brand img{width:145px;max-height:42px}.nav-group.right{justify-content:flex-end}.nav-group.right .nav-link{display:none}.mobile-menu.open{display:grid}.search-panel{padding:12px 16px}.search-panel button{padding:10px 12px}
+ .video-wall{grid-template-columns:repeat(2,minmax(0,1fr));aspect-ratio:auto}.runway-card{aspect-ratio:3/4}.runway-card video{object-fit:contain}.runway-caption{left:12px;right:8px;bottom:12px}.runway-caption span{font-size:7px;margin-bottom:5px}.runway-caption h2{font-size:21px}.runway-mark{top:11px;left:12px;font-size:7px}.runway-card:after{inset:38% 0 0}
+ .intro{width:calc(100% - 40px);padding:43px 0 45px;grid-template-columns:1fr;gap:23px}.eyebrow{font-size:8px}h1{font-size:clamp(43px,12vw,62px);max-width:520px;margin-top:16px}.intro-aside{padding:0 0 0 16px}.intro-aside p{font-size:12px;margin-bottom:17px}.button{min-height:44px;padding:0 17px;font-size:8px}.ticker{padding:11px 0}.ticker span{font-size:8px;gap:16px;padding-right:16px}
+ .section{width:calc(100% - 40px);padding:62px 0}.section-head{align-items:flex-start;flex-direction:column;gap:18px;margin-bottom:24px}.section-head.center{align-items:center;text-align:center;margin-bottom:27px}.section-title{font-size:clamp(32px,8vw,43px)}.section-description{font-size:11px}.arrival-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}.image-chip{top:9px;left:9px;padding:6px 7px;font-size:6px}.card-arrow{width:28px;height:28px;right:9px;bottom:9px;font-size:14px}.shop-info{padding-top:11px}.shop-info h3{font-size:19px}.shop-info p{font-size:7px}.category-section .section{padding-top:60px;padding-bottom:62px}.category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.category-card:last-child{grid-column:1/-1;aspect-ratio:4/5}.category-copy{left:13px;right:12px;bottom:14px}.category-copy span{font-size:7px;margin-bottom:6px}.category-copy h3{font-size:24px}.category-copy p{font-size:9px;margin-top:6px}
+ .signature-section{grid-template-columns:1fr;gap:14px}.signature-card{grid-template-columns:minmax(0,.82fr) minmax(0,1fr)}.signature-copy{padding:22px}.signature-copy h3{font-size:34px}.signature-copy p{font-size:10px;line-height:1.7;margin-bottom:18px}.signature-copy .mini{font-size:7px;margin-bottom:10px}.style-section .section{padding-top:60px;padding-bottom:62px}.feature-grid{gap:12px}.feature-card{aspect-ratio:4/5}.feature-copy{left:13px;right:12px;bottom:15px}.feature-copy .mini{font-size:7px;margin-bottom:8px}.feature-copy h3{font-size:clamp(22px,6vw,32px)}.feature-copy span{font-size:7px;letter-spacing:.1em}
+ .partner-band{width:calc(100% - 40px);margin-bottom:60px;grid-template-columns:1fr}.partner-copy{padding:30px 24px}.partner-copy h2{font-size:39px}.partner-copy p{font-size:11px}.partner-visual{min-height:0;aspect-ratio:4/5}.partner-visual:after{background:linear-gradient(180deg,var(--panel),transparent 28%)}
+ .footer-main,.footer-lower{width:calc(100% - 40px)}.footer-main{padding:44px 0 34px;grid-template-columns:1fr 1fr;gap:32px 22px}.footer-brand{grid-column:1/-1}.footer-brand p{max-width:360px}.footer-column h2{margin-bottom:16px;font-size:8px}.footer-column ul{gap:11px}.footer-column li a{font-size:9px}.footer-newsletter{grid-column:1/-1}.footer-lower{justify-content:space-between;gap:17px;padding:18px 0}.payment-logos{gap:5px}.pay-logo{min-width:27px;height:18px;font-size:6px}.master-mark{transform:scale(.9)}.footer-social{gap:8px}.copyright{width:100%;order:3;font-size:8px}
+}
+@media(max-width:380px){.runway-caption h2{font-size:18px}.signature-copy{padding:15px}.signature-copy h3{font-size:29px}.signature-copy p{font-size:9px}.category-copy h3{font-size:21px}.feature-copy h3{font-size:22px}.footer-main{grid-template-columns:1fr 1fr;gap:28px 15px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-track{animation:none}*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
+
+/* OMIKA ATELIER EXPERIENCE — refined composition, no cropped catalogue looks, and purposeful interactions. */
+[hidden]{display:none!important}
+.skip-link{position:fixed;top:10px;left:12px;z-index:200;transform:translateY(-160%);padding:12px 16px;background:var(--bone);color:var(--ink);font-size:12px}.skip-link:focus{transform:translateY(0)}
+:focus-visible{outline:2px solid var(--sage)!important;outline-offset:4px}
+.main-anchor{display:block;position:relative;top:-90px;visibility:hidden}
+.announcement{font-size:9px;letter-spacing:.15em;min-height:32px}
+.nav{height:78px}.nav-group a{font-size:10px}.brand img{width:170px;max-height:48px}
+.icon-button{position:relative;width:34px;height:34px}.icon-button svg{width:18px;height:18px}
+.saved-count{position:absolute;top:-1px;right:-2px;min-width:15px;height:15px;padding:0 3px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--sage);color:var(--ink);font-size:9px;font-weight:700;line-height:1}
+/* Source videos and the extracted catalogue share portrait ratios: the artwork is never forced into a landscape crop. */
+.video-wall{aspect-ratio:9/4}
+.runway-card{aspect-ratio:9/16}
+.runway-card video,.film-fallback{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.runway-card:after{inset:30% 0 0;background:linear-gradient(180deg,transparent 18%,rgba(7,10,7,.78))}
+.runway-mark{font-size:9px;letter-spacing:.16em}
+.film-toggle{position:absolute;z-index:4;top:13px;right:13px;width:31px;height:31px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(243,240,231,.6);border-radius:50%;background:rgba(9,13,9,.45);backdrop-filter:blur(8px);color:#fffdf5;font-size:12px;transition:background .2s,color .2s,border-color .2s}
+.film-toggle:hover{background:var(--sage);border-color:var(--sage);color:var(--ink)}.film-toggle:disabled{opacity:.5;cursor:not-allowed}
+.intro{padding-top:64px;padding-bottom:66px;position:relative}.intro:after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--line-strong),transparent)}
+.intro-aside p{font-size:14px;line-height:1.9;color:#b8c0b3}.eyebrow,.section-kicker{font-size:10px}
+.ticker{padding:15px 0}.ticker span{font-size:10px}
+.section{padding-top:94px;padding-bottom:94px}.section-description{font-size:13px;line-height:1.9}.section-title{letter-spacing:-.03em}
+.edit-filter-bar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:-5px 0 27px}
+.edit-filter{padding:10px 15px;border:1px solid var(--line-strong);border-radius:999px;background:transparent;color:var(--bone-soft);font-size:10px;letter-spacing:.06em;transition:background .2s,color .2s,border-color .2s}
+.edit-filter:hover,.edit-filter.active{background:var(--sage);border-color:var(--sage);color:#111811}
+.filter-status{margin-left:auto;color:var(--muted);font-size:10px;letter-spacing:.04em}
+.arrival-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));justify-content:center;gap:19px}.shop-card{width:100%;max-width:420px;justify-self:center}.category-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}.feature-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}.signature-section{grid-template-columns:repeat(auto-fit,minmax(min(100%,500px),1fr))}.image-frame{aspect-ratio:5/7;background:#171d18}.image-frame img,.category-card img,.feature-card img{object-fit:cover;object-position:center top}
+.shop-info h3{font-size:24px}.shop-info p{font-size:9px;letter-spacing:.1em;line-height:1.6}
+.image-chip{font-size:8px;letter-spacing:.12em}.card-arrow{width:36px;height:36px}
+.category-section .section{padding-top:86px;padding-bottom:88px}.category-grid{gap:19px}.category-card{aspect-ratio:5/7}.category-copy{left:24px;right:22px;bottom:25px}.category-copy span{font-size:9px}.category-copy h3{font-size:clamp(25px,2.4vw,35px)}.category-copy p{font-size:12px;line-height:1.75}
+.signature-card{background:#171e18;border-color:rgba(194,207,181,.14)}.signature-image{aspect-ratio:5/7;background:#111611}.signature-image img{object-fit:contain;object-position:center top}.signature-copy p{font-size:12px;line-height:1.9}.signature-copy .mini{font-size:9px}
+.style-section{background:#151b15}.style-section .section{padding-top:88px;padding-bottom:92px}.feature-card{aspect-ratio:5/7}.feature-copy .mini{font-size:9px}.feature-copy h3{font-size:clamp(34px,4.1vw,56px)}
+/* A single editorial pause gives the page a designer-campaign rhythm between the collection grids. */
+.editorial-story{width:min(1400px,calc(100% - 72px));margin:0 auto 24px;display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);align-items:stretch;background:#192119;border:1px solid var(--line);overflow:hidden;position:relative}
+.editorial-image{min-width:0;aspect-ratio:5/7;overflow:hidden;background:#111611}.editorial-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
+.editorial-copy{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(30px,6vw,92px);overflow:hidden}
+.editorial-copy:before{content:'';position:absolute;width:clamp(220px,28vw,430px);aspect-ratio:1;border:1px solid rgba(194,207,181,.12);border-radius:50%;right:-24%;top:-18%;pointer-events:none}
+.editorial-copy:after{content:'';position:absolute;width:clamp(150px,19vw,285px);aspect-ratio:1;border:1px solid rgba(194,207,181,.12);border-radius:50%;right:-9%;top:-5%;pointer-events:none}
+.editorial-overline{position:relative;z-index:1;font-size:10px;line-height:1.7;letter-spacing:.19em;text-transform:uppercase;color:var(--sage);margin:32px 0 12px}
+.editorial-copy h2{position:relative;z-index:1;font:normal clamp(46px,6vw,82px)/.96 var(--serif);letter-spacing:-.04em;margin:0 0 23px;color:var(--bone)}
+.editorial-copy h2 em{font-style:normal;color:var(--sage)}.editorial-copy>p:not(.editorial-overline){position:relative;z-index:1;color:#b8c0b3;font-size:14px;line-height:1.95;max-width:440px;margin:0 0 28px}
+.editorial-copy .button{position:relative;z-index:1}.editorial-signature{position:relative;z-index:1;margin-top:45px;padding-top:17px;border-top:1px solid var(--line);width:100%;color:#8e9b8a;font-size:9px;letter-spacing:.25em}.editorial-signature span{color:var(--sage);margin:0 8px}
+.partner-band{margin-bottom:96px}.partner-visual{aspect-ratio:5/7;min-height:0}.partner-visual img{object-fit:contain;object-position:center top}
+.footer-main{padding-top:66px;padding-bottom:55px}.footer-column h2{font-size:10px}.footer-column li a{font-size:11px;line-height:1.6}.footer-brand p,.footer-newsletter p{font-size:12px;line-height:1.9}.footer-follow{margin-top:20px;min-height:44px}.footer-lower{min-height:76px}.copyright{font-size:10px}
+.overlay{position:fixed;inset:0;z-index:120;background:rgba(5,8,5,.78);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;padding:24px;overflow-y:auto}
+body.overlay-open{overflow:hidden}
+.look-modal{position:relative;width:min(980px,100%);max-height:calc(100vh - 48px);overflow:auto;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);background:#151c16;border:1px solid var(--line-strong);box-shadow:0 30px 100px rgba(0,0,0,.45)}
+.look-modal-image{min-width:0;aspect-ratio:5/7;background:#0c100c;overflow:hidden}.look-modal-image img{display:block;width:100%;height:100%;object-fit:contain;object-position:center top}
+.look-modal-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(26px,5vw,62px)}.look-modal-copy h2,.drawer-head h2{font:normal clamp(35px,4.5vw,54px)/1.02 var(--serif);margin:16px 0 18px;letter-spacing:-.03em}.look-modal-copy>p{color:#b8c0b3;font-size:14px;line-height:1.9;margin:0 0 28px}.look-modal-actions{display:flex;flex-wrap:wrap;gap:10px}.look-modal-actions .button{font-size:9px}.look-modal-copy .modal-note{font-size:10px;color:#879183;line-height:1.7;margin-top:24px;margin-bottom:0}
+.overlay-close{position:absolute;z-index:5;right:14px;top:14px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line-strong);border-radius:50%;background:rgba(10,14,10,.72);color:var(--bone);font-size:25px;line-height:1;transition:background .2s,color .2s}.overlay-close:hover{background:var(--sage);color:var(--ink)}
+.drawer-overlay{justify-content:flex-end;padding:0}.side-drawer{position:relative;display:flex;flex-direction:column;width:min(480px,100%);height:100%;max-height:100dvh;background:#141a14;border-left:1px solid var(--line-strong);padding:34px clamp(22px,4vw,38px);overflow-y:auto;box-shadow:-30px 0 100px rgba(0,0,0,.3)}.drawer-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid var(--line);padding:12px 50px 24px 0}.drawer-head .section-kicker{margin-top:4px}.drawer-head h2{font-size:42px;margin-bottom:0}.drawer-head .overlay-close{top:32px;right:26px}.drawer-content{flex:1;padding:20px 0}.drawer-cta{align-self:flex-start;margin-top:16px}.saved-empty,.bag-empty{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:280px}.saved-empty h3,.bag-empty h3{font:normal 30px/1.12 var(--serif);margin:17px 0 9px}.saved-empty p,.bag-empty p{font-size:13px;line-height:1.85;color:var(--muted);max-width:320px;margin:0 0 23px}.bag-empty{flex:1}.bag-symbol{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border:1px solid var(--line-strong);border-radius:50%;color:var(--sage);font-size:24px}.saved-item{display:grid;grid-template-columns:88px 1fr;gap:15px;padding:15px 0;border-bottom:1px solid var(--line)}.saved-item img{width:88px;height:120px;object-fit:cover;object-position:center top;background:#202820}.saved-item-copy{display:flex;flex-direction:column;align-items:flex-start;gap:9px}.saved-item-copy strong{font:normal 23px/1.1 var(--serif)}.saved-open,.saved-remove{border:0;background:transparent;padding:0;color:var(--sage);font-size:10px;letter-spacing:.08em;text-transform:uppercase}.saved-remove{color:#9aa595;text-decoration:underline;text-underline-offset:3px}
+.back-to-top{position:fixed;z-index:60;right:24px;bottom:24px;width:44px;height:44px;border:1px solid var(--line-strong);border-radius:50%;background:rgba(17,21,17,.92);backdrop-filter:blur(8px);color:var(--sage);font-size:22px;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s,transform .2s,background .2s}.back-to-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}.back-to-top:hover{background:var(--sage);color:var(--ink)}
+.toast{font-size:12px;padding:14px 20px}
+@media(max-width:1050px){.nav{height:74px}.nav-group a{font-size:9px}.brand img{width:155px}.editorial-story{width:calc(100% - 48px)}.editorial-copy{padding:clamp(28px,4vw,50px)}.editorial-copy h2{font-size:clamp(42px,5.4vw,64px)}.section{padding-top:78px;padding-bottom:78px}.footer-main{gap:32px}}
+@media(max-width:760px){
+ .announcement{font-size:8px;letter-spacing:.1em;min-height:30px}.nav{width:calc(100% - 28px);height:68px;grid-template-columns:34px minmax(0,1fr) auto;gap:6px}.brand img{width:132px;max-height:39px}.nav-group.right{gap:2px}.nav-group.right .nav-link{display:none}.icon-button{width:30px;height:32px}.icon-button svg{width:17px;height:17px}.saved-count{right:-1px;top:-2px;min-width:13px;height:13px;font-size:8px}
+ .video-wall{grid-template-columns:repeat(2,minmax(0,1fr));aspect-ratio:auto}.runway-card{aspect-ratio:9/16}.runway-card video,.film-fallback{object-fit:cover}.runway-caption{left:12px;right:9px;bottom:14px}.runway-caption h2{font-size:clamp(19px,5.5vw,25px)}.runway-caption span{font-size:7px}.runway-mark{font-size:7px;top:12px;left:12px}.film-toggle{top:9px;right:9px;width:28px;height:28px;font-size:11px}
+ .intro{padding:44px 0 47px;gap:23px}.intro-aside p{font-size:13px;line-height:1.85}.ticker{padding:12px 0}.ticker span{font-size:8px}
+ .section{padding:64px 0;width:calc(100% - 40px)}.section-head{margin-bottom:24px}.section-title{font-size:clamp(34px,8.5vw,45px)}.section-description{font-size:12px}.edit-filter-bar{gap:7px;margin:-2px 0 22px}.edit-filter{padding:9px 12px;font-size:9px}.filter-status{width:100%;margin:3px 0 0}.arrival-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,165px),1fr));gap:25px 12px}.image-frame{aspect-ratio:5/7}.shop-info h3{font-size:20px}.shop-info p{font-size:8px}.image-chip{font-size:6px;left:8px;top:8px;padding:6px}.card-arrow{width:29px;height:29px;right:8px;bottom:8px}
+ .editorial-story{width:calc(100% - 40px);grid-template-columns:1fr;margin-bottom:0}.editorial-image{aspect-ratio:5/7;max-height:600px}.editorial-copy{padding:32px 25px 35px;min-height:420px}.editorial-overline{margin-top:24px;font-size:9px}.editorial-copy h2{font-size:clamp(46px,12vw,64px)}.editorial-copy>p:not(.editorial-overline){font-size:13px}.editorial-signature{margin-top:32px}
+ .category-section .section{padding-top:64px;padding-bottom:64px}.category-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,155px),1fr));gap:12px}.category-card{aspect-ratio:5/7}.category-card:last-child{grid-column:1/-1;aspect-ratio:5/7}.category-copy{left:13px;right:12px;bottom:15px}.category-copy span{font-size:7px;margin-bottom:7px}.category-copy h3{font-size:clamp(22px,6.2vw,29px)}.category-copy p{font-size:10px;line-height:1.65}
+ .signature-section{grid-template-columns:1fr;gap:14px}.signature-card{grid-template-columns:minmax(0,.85fr) minmax(0,1fr)}.signature-image{aspect-ratio:5/7}.signature-copy{padding:18px}.signature-copy h3{font-size:32px}.signature-copy p{font-size:10px;line-height:1.8;margin-bottom:18px}.signature-copy .mini{font-size:7px;margin-bottom:10px}.signature-copy .text-link{font-size:8px;letter-spacing:.08em}
+ .style-section .section{padding-top:64px;padding-bottom:66px}.feature-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px}.feature-card{aspect-ratio:5/7}.feature-copy{left:13px;right:12px;bottom:15px}.feature-copy .mini{font-size:7px;margin-bottom:8px}.feature-copy h3{font-size:clamp(22px,6vw,31px)}.feature-copy span{font-size:7px;letter-spacing:.08em}
+ .partner-band{width:calc(100% - 40px);margin-bottom:62px;grid-template-columns:1fr}.partner-copy{padding:30px 24px}.partner-copy h2{font-size:39px}.partner-copy p{font-size:12px}.partner-visual{aspect-ratio:5/7;min-height:0}.partner-visual:after{background:linear-gradient(180deg,var(--panel),transparent 22%)}
+ .footer-main,.footer-lower{width:calc(100% - 40px)}.footer-main{padding:43px 0 35px;grid-template-columns:1fr 1fr;gap:30px 20px}.footer-brand{grid-column:1/-1}.footer-brand p,.footer-newsletter p{font-size:11px}.footer-column h2{font-size:8px;margin-bottom:15px}.footer-column ul{gap:10px}.footer-column li a{font-size:10px}.footer-newsletter{grid-column:1/-1}.footer-follow{margin-top:17px}.footer-lower{gap:16px;padding:18px 0}.payment-logos{gap:5px}.pay-logo{min-width:27px;height:18px;font-size:6px}.footer-social{gap:8px}.copyright{width:100%;order:3;font-size:8px}.back-to-top{right:14px;bottom:14px;width:40px;height:40px}
+ .look-modal{grid-template-columns:1fr;max-height:calc(100dvh - 24px)}.look-modal-image{aspect-ratio:5/7;max-height:45dvh}.look-modal-copy{padding:26px 22px 28px}.look-modal-copy h2{font-size:39px;margin:12px 0}.look-modal-copy>p{font-size:12px;line-height:1.8;margin-bottom:19px}.look-modal-actions{width:100%;display:grid;grid-template-columns:1fr}.look-modal-actions .button{width:100%}.look-modal-copy .modal-note{margin-top:17px}.overlay{padding:12px}.drawer-overlay{padding:0}.side-drawer{padding:27px 22px}.drawer-head h2{font-size:36px}.drawer-head .overlay-close{top:25px;right:18px}.saved-item{grid-template-columns:72px 1fr}.saved-item img{width:72px;height:100px}.saved-item-copy strong{font-size:21px}
+}
+@media(max-width:380px){.brand img{width:119px}.nav{width:calc(100% - 20px)}.nav-group.right{gap:0}.icon-button{width:28px}.runway-caption h2{font-size:18px}.signature-copy{padding:14px}.signature-copy h3{font-size:29px}.signature-copy p{font-size:9px}.category-copy h3{font-size:21px}.feature-copy h3{font-size:22px}.editorial-copy{padding:28px 20px}.footer-main{gap:25px 14px}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none!important}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+
+
+/* FINAL COUTURE POLISH — accurate portrait framing, quieter motion and more intentional interaction. */
+:root{--image-ratio:1100 / 1556}
+.image-frame,.category-card,.signature-image,.feature-card,.editorial-image,.partner-visual{aspect-ratio:var(--image-ratio)}
+.category-card:last-child{aspect-ratio:var(--image-ratio)}
+.image-frame img,.category-card img,.feature-card img,.signature-image img,.editorial-image img,.partner-visual img{
+  object-fit:contain;object-position:center top;background:var(--ink-soft)
+}
+/* The catalogue source files are full-length portraits. Preserve the complete garment and headroom. */
+.image-frame img,.category-card img,.feature-card img{transition:filter .45s ease,opacity .45s ease;transform:none!important}
+.shop-card:hover .image-frame img,.category-card:hover img,.feature-card:hover img{filter:brightness(1.035) saturate(1.025);transform:none!important}
+.shop-card:hover .shop-info h3{color:var(--sage);transition:color .25s ease}
+.card-arrow{transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease}
+.shop-card:hover .card-arrow{transform:translate(2px,-2px)}
+.category-card,.feature-card,.shop-card{background:var(--panel)}
+.category-copy h3,.feature-copy h3{transition:color .25s ease,transform .25s ease}
+.category-card:hover .category-copy h3,.feature-card:hover .feature-copy h3{color:var(--sage);transform:translateY(-2px)}
+.signature-image img{width:100%;height:100%}
+.editorial-image img{object-fit:contain;object-position:center top}
+.partner-visual img{object-fit:contain;object-position:center top}
+.saved-item img{width:88px;height:auto;aspect-ratio:var(--image-ratio);object-fit:contain;object-position:center top;align-self:start}
+.reveal-item.is-revealed{animation:omikaEditorialReveal .72s cubic-bezier(.2,.72,.2,1) both}
+@keyframes omikaEditorialReveal{from{opacity:.35;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){
+  .image-frame,.category-card,.signature-image,.feature-card,.editorial-image,.partner-visual,.category-card:last-child{aspect-ratio:var(--image-ratio)}
+  .image-frame img,.category-card img,.feature-card img,.signature-image img,.editorial-image img,.partner-visual img{object-fit:contain;object-position:center top}
+  .category-copy span,.feature-copy .mini{font-size:8px;letter-spacing:.13em}
+  .category-copy p{font-size:11px;line-height:1.65}
+  .image-chip{font-size:7px;letter-spacing:.1em}
+  .shop-info p{font-size:8.5px;line-height:1.55}
+  .saved-item img{width:72px;height:auto}
+}
+@media(hover:none){.shop-card:hover .card-arrow{transform:none}.shop-card:hover .image-frame img,.category-card:hover img,.feature-card:hover img{filter:none}}
+@media(prefers-reduced-motion:reduce){.reveal-item.is-revealed{animation:none!important}}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div class="announcement"><span>OMIKA ATELIER · THE NEW SEASON</span><span aria-hidden="true">·</span><a href="#new-arrivals">Discover the edit ↗</a></div>
+<header class="site-header">
+ <nav class="nav" aria-label="Main navigation">
+  <div class="nav-group desktop"><a href="#new-arrivals">New Arrivals</a><a href="#collections">Collections</a><a href="#categories">Shop by Category</a></div>
+  <button class="icon-button menu-button" id="menuToggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+  <a class="brand" href="#top" aria-label="Omika Couture home"><img id="brandLogo" src="assets/omika-logo-transparent.png" alt="Omika Couture"><span class="brand-fallback" id="brandFallback">OMIKA</span></a>
+  <div class="nav-group right"><a class="nav-link" href="#wholesale">Wholesale</a><button class="icon-button" id="searchToggle" aria-label="Search collections" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="icon-button saved-toggle" id="savedToggle" aria-label="Saved looks" aria-haspopup="dialog"><svg viewBox="0 0 24 24"><path d="M20.4 8.8c0 5.1-8.4 10.1-8.4 10.1S3.6 13.9 3.6 8.8a4.3 4.3 0 0 1 8.4-1.3 4.3 4.3 0 0 1 8.4 1.3Z"/></svg><span class="saved-count" id="savedCount" hidden>0</span></button><button class="icon-button" id="bagButton" aria-label="Open shopping bag" aria-haspopup="dialog"><svg viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg></button></div>
+ </nav>
+ <div class="mobile-menu" id="mobileMenu"><a href="#new-arrivals">New Arrivals</a><a href="#categories">Shop by Category</a><a href="#collections">Adah &amp; Rasika</a><a href="#editorial-story">The Omika Story</a><a href="#celebrity">Celebrity Closet</a><a href="#influencers">Influencer Picks</a><a href="#wholesale">Wholesale Enquiries</a><a href="https://www.instagram.com/omikaofficial.in/" target="_blank" rel="noopener">Instagram ↗</a></div>
+ <div class="search-panel" id="searchPanel"><label class="sr-only" for="searchInput">Search the homepage</label><input id="searchInput" type="search" placeholder="Try drapes, festive, Adah or Rasika…"><button id="searchGo">Find the edit ↗</button></div>
+</header>
+<main id="top"><span id="main-content" class="main-anchor" tabindex="-1"></span>
+ <section class="video-runway" aria-label="Omika fashion films">
+  <div class="video-wall">
+   <article class="runway-card" data-visual-card><video autoplay muted loop playsinline preload="none" poster="assets/poster-silhouette.jpg" aria-label="Omika look in motion: the silhouette"><source data-src="assets/film-silhouette.mp4" type="video/mp4"></video><div class="runway-mark">Omika in motion</div><button class="film-toggle" type="button" aria-label="Pause film" title="Pause film"><span aria-hidden="true">Ⅱ</span></button><div class="runway-caption"><span>Fluid form</span><h2>The silhouette</h2></div></article>
+   <article class="runway-card" data-visual-card><video autoplay muted loop playsinline preload="none" poster="assets/poster-details.jpg" aria-label="Omika look in motion: the details"><source data-src="assets/film-details.mp4" type="video/mp4"></video><div class="runway-mark">Crafted to be felt</div><button class="film-toggle" type="button" aria-label="Pause film" title="Pause film"><span aria-hidden="true">Ⅱ</span></button><div class="runway-caption"><span>Quiet detail</span><h2>The finish</h2></div></article>
+   <article class="runway-card" data-visual-card><video autoplay muted loop playsinline preload="none" poster="assets/poster-feeling.jpg" aria-label="Omika look in motion: the feeling"><source data-src="assets/film-feeling.mp4" type="video/mp4"></video><div class="runway-mark">Colour with character</div><button class="film-toggle" type="button" aria-label="Pause film" title="Pause film"><span aria-hidden="true">Ⅱ</span></button><div class="runway-caption"><span>Made to move</span><h2>The feeling</h2></div></article>
+   <article class="runway-card" data-visual-card><video autoplay muted loop playsinline preload="none" poster="assets/poster-entrance.jpg" aria-label="Omika look in motion: the entrance"><source data-src="assets/film-entrance.mp4" type="video/mp4"></video><div class="runway-mark">For the moment</div><button class="film-toggle" type="button" aria-label="Pause film" title="Pause film"><span aria-hidden="true">Ⅱ</span></button><div class="runway-caption"><span>Own the room</span><h2>The entrance</h2></div></article>
+  </div>
+ </section>
+ <section class="intro">
+  <div><div class="eyebrow">Contemporary Indian wear</div><h1>Indian craft.<br><em>Modern instinct.</em></h1></div>
+  <div class="intro-aside"><p>Expressive colour, considered detail and silhouettes that move with you — made for the moments you will remember.</p><div class="actions"><a class="button primary" href="#new-arrivals">Explore the collection <span class="arrow">↗</span></a><a class="button outline" href="#collections">Meet Adah & Rasika</a></div></div>
+ </section>
+ <div class="ticker" aria-label="Omika design philosophy"><div class="ticker-track" aria-hidden="true"><span>Made to move <b>✳</b> Made to be remembered <b>✳</b> Made for your moments <b>✳</b> Indian craft, modern instinct <b>✳</b> Made to move <b>✳</b> Made to be remembered <b>✳</b> Made for your moments <b>✳</b> Indian craft, modern instinct <b>✳</b></span><span>Made to move <b>✳</b> Made to be remembered <b>✳</b> Made for your moments <b>✳</b> Indian craft, modern instinct <b>✳</b> Made to move <b>✳</b> Made to be remembered <b>✳</b> Made for your moments <b>✳</b> Indian craft, modern instinct <b>✳</b></span></div></div>
+ <section class="section" id="new-arrivals">
+  <div class="section-head"><div><div class="section-kicker">Fresh from the atelier</div><h2 class="section-title">The new edit</h2><p class="section-description">New-season expressions, occasion-ready favourites and pieces worth coming back to.</p></div><a class="text-link" href="#categories">Explore all edits <span>↗</span></a></div>
+  <div class="edit-filter-bar" role="group" aria-label="Filter the new edit">
+   <button type="button" class="edit-filter active" data-filter="all" aria-pressed="true">All looks</button>
+   <button type="button" class="edit-filter" data-filter="occasion" aria-pressed="false">Occasion</button>
+   <button type="button" class="edit-filter" data-filter="everyday" aria-pressed="false">Everyday</button>
+   <button type="button" class="edit-filter" data-filter="statement" aria-pressed="false">Statement</button>
+   <span class="filter-status" id="filterStatus" aria-live="polite">Four edits to explore</span>
+  </div>
+  <div class="arrival-grid">
+   <a class="shop-card" href="#categories" data-visual-card data-look data-look-id="new-arrivals" data-look-title="New Arrivals" data-look-copy="New-season colour, confident embroidery and pieces that make an entrance." data-tags="occasion statement"><div class="image-frame"><img src="assets/category-new-arrivals.jpg" alt="Model in a vivid pink and red embroidered Omika ensemble" width="1100" height="1556" loading="eager" decoding="async"><span class="image-chip">Just arrived</span><span class="card-arrow">↗</span></div><div class="shop-info"><div><h3>New Arrivals</h3><p>Meet your next favourite</p></div><span class="simple-arrow">↗</span></div></a>
+   <a class="shop-card" href="#categories" data-visual-card data-look data-look-id="drapes" data-look-title="Drapes" data-look-copy="Soft movement, beautiful folds and an effortless way to make a statement." data-tags="statement occasion"><div class="image-frame"><img src="assets/category-drapes.jpg" alt="Model in an ivory ensemble with a flowing dupatta" width="1100" height="1556" loading="lazy" decoding="async"><span class="image-chip">The drape edit</span><span class="card-arrow">↗</span></div><div class="shop-info"><div><h3>Drapes</h3><p>Ease in every fold</p></div><span class="simple-arrow">↗</span></div></a>
+   <a class="shop-card" href="#categories" data-visual-card data-look data-look-id="ready-to-wear" data-look-title="Ready to Wear" data-look-copy="Considered silhouettes and expressive details for dressing beautifully, without the fuss." data-tags="everyday"><div class="image-frame"><img src="assets/category-ready-to-wear.jpg" alt="Model in a soft lilac embroidered ready-to-wear look" width="1100" height="1556" loading="lazy" decoding="async"><span class="image-chip">Ready when you are</span><span class="card-arrow">↗</span></div><div class="shop-info"><div><h3>Ready to Wear</h3><p>Statement made simple</p></div><span class="simple-arrow">↗</span></div></a>
+   <a class="shop-card" href="#categories" data-visual-card data-look data-look-id="festive-edit" data-look-title="Festive Edit" data-look-copy="Colour, craft and occasion dressing for the moments worth celebrating." data-tags="occasion statement"><div class="image-frame"><img src="assets/category-festive-edit.jpg" alt="Model in a vivid yellow and violet festive outfit" width="1100" height="1556" loading="lazy" decoding="async"><span class="image-chip">Occasion ready</span><span class="card-arrow">↗</span></div><div class="shop-info"><div><h3>Festive Edit</h3><p>Dress up, feel like you</p></div><span class="simple-arrow">↗</span></div></a>
+  </div>
+ </section>
+
+ <section class="editorial-story" id="editorial-story" aria-labelledby="editorial-title" data-visual-card>
+  <div class="editorial-image"><img src="assets/editorial-story.jpg" alt="Model in an ivory embroidered ensemble with a long, flowing dupatta" width="1100" height="1556" loading="lazy" decoding="async"></div>
+  <div class="editorial-copy">
+   <div class="section-kicker">A note from the atelier</div>
+   <p class="editorial-overline">Not just dressed.<br>Remembered.</p>
+   <h2 id="editorial-title">The art of<br><em>the entrance.</em></h2>
+   <p>Some looks are made for a moment. The best ones make the moment yours. Discover expressive Indian wear, finished with detail and designed to move with you.</p>
+   <a class="button outline" href="#categories">Find your feeling <span class="arrow">↗</span></a>
+   <div class="editorial-signature" aria-hidden="true">OMIKA <span>—</span> COUTURE</div>
+  </div>
+ </section>
+ <section class="category-section" id="categories"><div class="section">
+  <div class="section-head center"><div class="section-kicker">Find your feeling</div><h2 class="section-title">Dress by mood, not by rules.</h2><p class="section-description">From understated elegance to a full entrance, find the look that feels like you.</p></div>
+  <div class="category-grid">
+   <a class="category-card" href="#new-arrivals" data-visual-card data-look data-look-id="women-apparel" data-look-title="Women’s Apparel" data-look-copy="Personal style, beautifully expressed — with colour and detail that feel like you."><img src="assets/category-womens.jpg" alt="Model in a rich orange embroidered Omika ensemble" width="1100" height="1556" loading="lazy" decoding="async"><div class="category-copy"><span>Everyday elegance</span><h3>Women’s Apparel</h3><p>Personal style, beautifully expressed.</p></div></a>
+   <a class="category-card" href="#new-arrivals" data-visual-card data-look data-look-id="wedding-occasion" data-look-title="Wedding & Occasion" data-look-copy="Considered occasionwear for celebrations, gatherings and the moments that stay with you."><img src="assets/category-wedding.jpg" alt="Model in a deep navy and silver wedding ensemble" width="1100" height="1556" loading="lazy" decoding="async"><div class="category-copy"><span>For the big moments</span><h3>Wedding & Occasion</h3><p>Looks that stay with you.</p></div></a>
+   <a class="category-card" href="#new-arrivals" data-visual-card data-look data-look-id="bestsellers" data-look-title="Bestsellers" data-look-copy="A curated edit of expressive looks, rich details and memorable silhouettes."><img src="assets/category-bestsellers.jpg" alt="Model in a green and violet embroidered statement outfit" width="1100" height="1556" loading="lazy" decoding="async"><div class="category-copy"><span>Well-loved for a reason</span><h3>Bestsellers</h3><p>The pieces everyone remembers.</p></div></a>
+  </div>
+ </div></section>
+ <section class="section" id="collections">
+  <div class="section-head"><div><div class="section-kicker">Two signatures, many ways to wear them</div><h2 class="section-title">A world of their own.</h2><p class="section-description">Meet the distinct moods at the heart of Omika.</p></div></div>
+  <div class="signature-section">
+   <article class="signature-card" data-visual-card data-look data-look-id="adah" data-look-title="Adah" data-look-copy="Quiet confidence, expressive detail and a modern Indian sensibility."><div class="signature-image"><img src="assets/collection-adah.jpg" alt="Adah signature look in teal and ivory embroidered Indian wear" width="1100" height="1556" loading="lazy" decoding="async"></div><div class="signature-copy"><div class="mini">The confident signature</div><h3>Adah</h3><p>Quiet confidence, expressive detail and a modern Indian sensibility.</p><a class="text-link" href="#new-arrivals">Discover Adah <span>↗</span></a></div></article>
+   <article class="signature-card" data-visual-card data-look data-look-id="rasika" data-look-title="Rasika" data-look-copy="Texture, colour and considered craft, with a little room to play."><div class="signature-image"><img src="assets/collection-rasika.jpg" alt="Rasika signature look in magenta and metallic embroidered Indian wear" width="1100" height="1556" loading="lazy" decoding="async"></div><div class="signature-copy"><div class="mini">The softer statement</div><h3>Rasika</h3><p>Texture, colour and considered craft, with a little room to play.</p><a class="text-link" href="#new-arrivals">Discover Rasika <span>↗</span></a></div></article>
+  </div>
+ </section>
+ <section class="style-section" id="celebrity"><div class="section">
+  <div class="section-head"><div><div class="section-kicker">The style file</div><h2 class="section-title">A look, your way.</h2><p class="section-description">Save an idea, borrow a styling cue, and make the moment your own.</p></div><a class="text-link" href="https://www.instagram.com/omikaofficial.in/" target="_blank" rel="noopener">Follow Omika <span>↗</span></a></div>
+  <div class="feature-grid">
+   <a class="feature-card" href="https://www.instagram.com/omikaofficial.in/" target="_blank" rel="noopener" data-visual-card><img src="assets/edit-celebrity.jpg" alt="Omika occasionwear look in black and red with intricate embroidery" width="1100" height="1556" loading="lazy" decoding="async"><div class="feature-copy"><div class="mini">In the spotlight</div><h3>Celebrity Closet</h3><span>Explore the looks ↗</span></div></a>
+   <a class="feature-card" id="influencers" href="https://www.instagram.com/omikaofficial.in/" target="_blank" rel="noopener" data-visual-card><img src="assets/edit-influencer.jpg" alt="Omika model in a rich rust embroidered ensemble" width="1100" height="1556" loading="lazy" decoding="async"><div class="feature-copy"><div class="mini">Styled your way</div><h3>Influencer Picks</h3><span>Find your inspiration ↗</span></div></a>
+  </div>
+ </div></section>
+ <section class="partner-band" id="wholesale" data-visual-card><div class="partner-copy"><div class="section-kicker">For our retail partners</div><h2>Bring the Omika story to your store.</h2><p>For boutiques, multi-brand stores and wholesale enquiries, connect with us to explore the collections and partnership opportunities.</p><a class="button primary" href="https://www.instagram.com/omikaofficial.in/" target="_blank" rel="noopener">Wholesale enquiries <span class="arrow">↗</span></a></div><div class="partner-visual"><img src="assets/hero-portrait-fit.jpg" alt="Omika model in a deep teal full-length embroidered outfit" width="1100" height="1556" loading="lazy" decoding="async"></div></section>
+</main>
+<footer class="site-footer">
+ <div class="footer-main">
+  <div class="footer-brand"><a href="#top" aria-label="Back to Omika home"><img src="assets/omika-logo-transparent.png" alt="Omika Couture" width="1136" height="280" loading="lazy"></a><p>Contemporary Indian wear, shaped by expressive colour, considered details and the art of dressing beautifully.</p></div>
+  <div class="footer-column"><h2>Explore Omika</h2><ul><li><a href="#new-arrivals">New Arrivals</a></li><li><a href="#categories">Women’s Apparel</a></li><li><a href="#new-arrivals">Drapes</a></li><li><a href="#new-arrivals">Ready to Wear</a></li><li><a href="#collections">Adah & Rasika</a></li><li><a href="#celebrity">Celebrity Closet</a></li><li><a href="#influencers">Influencer Picks</a></li></ul></div>
+  <div class="footer-column"><h2>Discover</h2><ul><li><a href="#editorial-story">The Omika Story</a></li><li><a href="#collections">Adah &amp; Rasika</a></li><li><a href="#celebrity">Style Inspiration</a></li><li><a href="#wholesale">Wholesale Enquiries</a></li><li><a href="https://www.instagram.com/omikaofficial.in/" target="_blank" rel="noopener">Instagram ↗</a></li></ul></div>
+  <div class="footer-column footer-newsletter" id="newsletter"><h2>Stay in the story</h2><p>Discover new collections, styling notes and behind-the-scenes moments from the Omika world.</p><a class="button outline footer-follow" href="https://www.instagram.com/omikaofficial.in/" target="_blank" rel="noopener">Follow Omika <span class="arrow">↗</span></a></div></div>
+ </div>
+ <div class="footer-lower"><div class="payment-logos" aria-label="Payment method placeholders"><span class="pay-logo">VISA</span><span class="pay-logo amex">AMEX</span><span class="master-mark" aria-label="Mastercard"></span><span class="pay-logo rupay">RuPay</span><span class="pay-logo upi">UPI</span><span class="pay-logo">PayPal</span></div><div class="footer-social"><a href="https://www.instagram.com/omikaofficial.in/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.5" r="1"/></svg></a></div><div class="copyright">© <span id="year">2026</span> Omika Couture · All rights reserved</div></div>
+</footer>
+
+<div class="overlay" id="lookOverlay" hidden>
+ <section class="look-modal" id="lookModal" role="dialog" aria-modal="true" aria-labelledby="lookModalTitle" aria-describedby="lookModalCopy" tabindex="-1">
+  <button class="overlay-close" type="button" data-close-overlay aria-label="Close look preview">×</button>
+  <div class="look-modal-image"><img id="lookModalImage" src="assets/category-new-arrivals.jpg" alt=""></div>
+  <div class="look-modal-copy"><div class="section-kicker">From the Omika edit</div><h2 id="lookModalTitle">Discover the edit</h2><p id="lookModalCopy">Expressive colour, considered craft and silhouettes made for your moments.</p><div class="look-modal-actions"><button class="button primary" id="saveLookButton" type="button">♡ Save this look</button><a class="button outline" href="https://www.instagram.com/omikaofficial.in/" target="_blank" rel="noopener">Explore on Instagram ↗</a></div><p class="modal-note">A closer look at Omika’s collection and styling inspiration.</p></div>
+ </section>
+</div>
+<div class="overlay drawer-overlay" id="savedOverlay" hidden>
+ <aside class="side-drawer" role="dialog" aria-modal="true" aria-labelledby="savedTitle" tabindex="-1"><div class="drawer-head"><div><div class="section-kicker">Your personal edit</div><h2 id="savedTitle">Saved looks</h2></div><button class="overlay-close" type="button" data-close-overlay aria-label="Close saved looks">×</button></div><div class="drawer-content" id="savedItems"></div><a class="button primary drawer-cta" href="#new-arrivals" data-drawer-close>Explore the new edit ↗</a></aside>
+</div>
+<div class="overlay drawer-overlay" id="bagOverlay" hidden>
+ <aside class="side-drawer bag-drawer" role="dialog" aria-modal="true" aria-labelledby="bagTitle" tabindex="-1"><div class="drawer-head"><div><div class="section-kicker">A little something special</div><h2 id="bagTitle">Your bag</h2></div><button class="overlay-close" type="button" data-close-overlay aria-label="Close shopping bag">×</button></div><div class="bag-empty"><div class="bag-symbol" aria-hidden="true">✳</div><h3>Your next favourite is out there.</h3><p>Explore the latest Omika edit and find a look that feels like you.</p><a class="button primary" href="#new-arrivals" data-drawer-close>Discover new arrivals ↗</a></div></aside>
+</div>
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(() => {
+  const $ = (selector, root=document) => root.querySelector(selector);
+  const $$ = (selector, root=document) => [...root.querySelectorAll(selector)];
+  const toast = $('#toast');
+  let toastTimer, lastFocused = null, activeLook = null;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let volatileSaved = [];
+  const safeStore = {
+    read(){ try { const raw=localStorage.getItem('omikaSavedLooksV1'); if(raw===null)return volatileSaved; const parsed=JSON.parse(raw); return Array.isArray(parsed)?parsed:volatileSaved; } catch { return volatileSaved; } },
+    write(items){ volatileSaved=Array.isArray(items)?items:[]; try { localStorage.setItem('omikaSavedLooksV1', JSON.stringify(volatileSaved)); } catch {} }
+  };
+  function showToast(message){
+    if(!toast) return;
+    toast.textContent=message; toast.classList.add('show');
+    clearTimeout(toastTimer); toastTimer=setTimeout(()=>toast.classList.remove('show'),3000);
+  }
+  function setOverlay(overlay, open){
+    if(!overlay) return;
+    if(open){
+      lastFocused=document.activeElement;
+      overlay.hidden=false; document.body.classList.add('overlay-open');
+      const dialog=$('[role="dialog"]',overlay); if(dialog) dialog.focus();
+    } else {
+      overlay.hidden=true;
+      if(!$$('.overlay:not([hidden])').length) document.body.classList.remove('overlay-open');
+      if(lastFocused && typeof lastFocused.focus==='function') lastFocused.focus();
+    }
+  }
+  function closeAllOverlays(){ $$('.overlay:not([hidden])').forEach(o=>{o.hidden=true;}); document.body.classList.remove('overlay-open'); if(lastFocused) lastFocused.focus(); }
+  // Mobile navigation
+  const menuToggle=$('#menuToggle'), mobileMenu=$('#mobileMenu');
+  menuToggle?.addEventListener('click',()=>{
+    const open=mobileMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded',String(open));
+    menuToggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+  });
+  $$('#mobileMenu a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.remove('open');menuToggle?.setAttribute('aria-expanded','false');}));
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape' && mobileMenu?.classList.contains('open')){
+      mobileMenu.classList.remove('open');
+      menuToggle?.setAttribute('aria-expanded','false');
+      menuToggle?.setAttribute('aria-label','Open menu');
+      menuToggle?.focus();
+    }
+  });
+  // Search across the actual collection cards.
+  const searchToggle=$('#searchToggle'), searchPanel=$('#searchPanel'), searchInput=$('#searchInput');
+  searchToggle?.addEventListener('click',()=>{
+    const open=searchPanel.classList.toggle('open'); searchToggle.setAttribute('aria-expanded',String(open));
+    if(open) searchInput?.focus();
+  });
+  function runSearch(){
+    const q=(searchInput?.value||'').trim().toLowerCase();
+    if(!q){showToast('Enter a collection, mood or category to search.');return;}
+    const targets=$$('[data-look-id]');
+    const match=targets.find(el=>(el.dataset.lookTitle||el.innerText).toLowerCase().includes(q) || (el.dataset.lookCopy||'').toLowerCase().includes(q) || ($('img',el)?.alt||'').toLowerCase().includes(q));
+    if(match){if(match.hidden){$('.edit-filter[data-filter=all]')?.click();}match.scrollIntoView({behavior:reducedMotion?'auto':'smooth',block:'center'});setTimeout(()=>openLook(match),reducedMotion?0:250);}
+    else showToast('No exact match yet. Try Drapes, Adah, Rasika, Festive or Ready to Wear.');
+  }
+  $('#searchGo')?.addEventListener('click',runSearch);
+  searchInput?.addEventListener('keydown',e=>{if(e.key==='Enter')runSearch();if(e.key==='Escape'){searchPanel.classList.remove('open');searchToggle?.setAttribute('aria-expanded','false');searchToggle?.focus();}});
+  // Filter the four lead collections without leaving holes in the grid.
+  const filterButtons=$$('.edit-filter'), filterCards=$$('.shop-card[data-tags]'), filterStatus=$('#filterStatus');
+  filterButtons.forEach(button=>button.addEventListener('click',()=>{
+    const filter=button.dataset.filter;
+    filterButtons.forEach(b=>{const active=b===button;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+    let visible=0;
+    filterCards.forEach(card=>{const show=filter==='all'||(card.dataset.tags||'').split(/\s+/).includes(filter);card.hidden=!show;if(show)visible++;});
+    if(filterStatus)filterStatus.textContent=`${visible} ${visible===1?'edit':'edits'} to explore`;
+  }));
+  // Quick-look modal: every collection preview has a clear next action.
+  const lookOverlay=$('#lookOverlay'), modalTitle=$('#lookModalTitle'), modalCopy=$('#lookModalCopy'), modalImage=$('#lookModalImage'), saveLookButton=$('#saveLookButton');
+  function getLookData(card){
+    const img=$('img',card);
+    return {id:card.dataset.lookId||card.id||'omika-look',title:card.dataset.lookTitle||$('h3',card)?.textContent.trim()||'The Omika edit',copy:card.dataset.lookCopy||$('p',card)?.textContent.trim()||'Discover expressive colour and considered craft.',image:img?.currentSrc||img?.src||'',alt:img?.alt||''};
+  }
+  function openLook(card){
+    if(!card) return;
+    activeLook=getLookData(card);
+    modalTitle.textContent=activeLook.title; modalCopy.textContent=activeLook.copy;
+    if(activeLook.image){modalImage.src=activeLook.image;modalImage.alt=activeLook.alt;}else{modalImage.removeAttribute('src');modalImage.alt='';}
+    updateSaveButton(); setOverlay(lookOverlay,true);
+  }
+  $$('[data-look]').forEach(card=>card.addEventListener('click',e=>{
+    if(e.target.closest('button')) return;
+    const clickedLink=e.target.closest('a');
+    // Let nested links perform their own action; clicking the card surface opens its look preview.
+    if(clickedLink && clickedLink!==card) return;
+    if(clickedLink && clickedLink.target==='_blank') return;
+    e.preventDefault(); openLook(card);
+  }));
+  function savedLooks(){return safeStore.read();}
+  function isSaved(id){return savedLooks().some(item=>item.id===id);}
+  function updateSaveButton(){
+    if(!activeLook||!saveLookButton)return;
+    const saved=isSaved(activeLook.id);
+    saveLookButton.classList.toggle('is-saved',saved);
+    saveLookButton.textContent=saved?'♥ Saved to your edit':'♡ Save this look';
+    saveLookButton.setAttribute('aria-pressed',String(saved));
+  }
+  function updateSavedCount(){
+    const count=$('#savedCount'), n=savedLooks().length;
+    count.textContent=String(n); count.hidden=n===0;
+    $('#savedToggle')?.setAttribute('aria-label',n?`Saved looks, ${n} saved`:'Saved looks');
+  }
+  function renderSavedItems(){
+    const container=$('#savedItems'); if(!container)return;
+    container.replaceChildren(); const items=savedLooks();
+    if(!items.length){
+      const empty=document.createElement('div');empty.className='saved-empty';
+      const icon=document.createElement('div');icon.className='bag-symbol';icon.textContent='♡';
+      const h=document.createElement('h3');h.textContent='Your edit starts here.';
+      const p=document.createElement('p');p.textContent='Save the looks and collections you want to come back to.';
+      empty.append(icon,h,p);container.append(empty);return;
+    }
+    items.forEach(item=>{
+      const row=document.createElement('div');row.className='saved-item';
+      const img=document.createElement('img');img.src=item.image;img.alt=item.alt||'';img.loading='lazy';
+      const copy=document.createElement('div');copy.className='saved-item-copy';
+      const title=document.createElement('strong');title.textContent=item.title;
+      const open=document.createElement('button');open.type='button';open.className='saved-open';open.textContent='View look ↗';
+      open.addEventListener('click',()=>{setOverlay($('#savedOverlay'),false);const card=$$('[data-look-id]').find(el=>el.dataset.lookId===item.id);if(card)openLook(card);});
+      const remove=document.createElement('button');remove.type='button';remove.className='saved-remove';remove.textContent='Remove';remove.addEventListener('click',()=>{safeStore.write(savedLooks().filter(x=>x.id!==item.id));renderSavedItems();updateSavedCount();updateSaveButton();});
+      copy.append(title,open,remove);row.append(img,copy);container.append(row);
+    });
+  }
+  saveLookButton?.addEventListener('click',()=>{
+    if(!activeLook)return;
+    const items=savedLooks();
+    if(items.some(item=>item.id===activeLook.id)) safeStore.write(items.filter(item=>item.id!==activeLook.id));
+    else safeStore.write([...items,activeLook]);
+    updateSaveButton();updateSavedCount();
+    showToast(isSaved(activeLook.id)?'Saved to your Omika edit.':'Removed from your saved edit.');
+  });
+  $('#savedToggle')?.addEventListener('click',()=>{renderSavedItems();setOverlay($('#savedOverlay'),true);});
+  $('#bagButton')?.addEventListener('click',()=>setOverlay($('#bagOverlay'),true));
+  $$('[data-close-overlay]').forEach(button=>button.addEventListener('click',()=>setOverlay(button.closest('.overlay'),false)));
+  $$('.overlay').forEach(overlay=>overlay.addEventListener('click',e=>{if(e.target===overlay)setOverlay(overlay,false);}));
+  $$('[data-drawer-close]').forEach(link=>link.addEventListener('click',()=>{closeAllOverlays();}));
+  document.addEventListener('keydown',e=>{
+    const activeOverlay=$$('.overlay:not([hidden])').at(-1);
+    if(e.key==='Escape' && activeOverlay){closeAllOverlays();return;}
+    if(e.key==='Tab' && activeOverlay){
+      const dialog=$('[role="dialog"]',activeOverlay);
+      const focusable=$$('a[href],button:not([disabled]),input:not([disabled]),[tabindex="0"]',dialog).filter(el=>el.offsetWidth||el.offsetHeight||el===document.activeElement);
+      if(!focusable.length)return;
+      const first=focusable[0],last=focusable[focusable.length-1];
+      if(e.shiftKey && document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  });
+  updateSavedCount();
+  // Video loading and playback: posters render first, and motion preferences are respected.
+  const videos=$$('.runway-card video');
+  function loadVideo(video){
+    if(video.dataset.loaded==='true')return;
+    $$('source[data-src]',video).forEach(source=>{source.src=source.dataset.src;source.removeAttribute('data-src');});
+    video.dataset.loaded='true';video.load();
+  }
+  async function playVideo(video,userInitiated=false){
+    if(reducedMotion&&!userInitiated){video.pause();return;}
+    try{video.muted=true;video.defaultMuted=true;await video.play();const b=video.closest('.runway-card')?.querySelector('.film-toggle');if(b){b.innerHTML='<span aria-hidden="true">Ⅱ</span>';b.setAttribute('aria-label','Pause film');b.title='Pause film';}}
+    catch{ /* The poster remains available if autoplay is blocked. */ }
+  }
+  videos.forEach(video=>{
+    const btn=video.closest('.runway-card')?.querySelector('.film-toggle');
+    if(btn)btn.addEventListener('click',async()=>{
+      if(video.dataset.loaded!=='true')loadVideo(video);
+      if(video.paused){await playVideo(video,true);if(video.paused){btn.innerHTML='<span aria-hidden="true">▶</span>';btn.setAttribute('aria-label','Play film');btn.title='Play film';}}
+      else{video.pause();btn.innerHTML='<span aria-hidden="true">▶</span>';btn.setAttribute('aria-label','Play film');btn.title='Play film';}
+    });
+    video.addEventListener('error',()=>{
+      const card=video.closest('.runway-card');
+      if(!card||card.dataset.posterFallback==='true')return;
+      card.dataset.posterFallback='true';video.style.display='none';
+      const poster=document.createElement('img');poster.className='film-fallback';poster.src=video.getAttribute('poster');poster.alt=video.getAttribute('aria-label')||'Omika fashion film';
+      card.insertBefore(poster,card.firstChild);
+      if(btn){btn.innerHTML='<span aria-hidden="true">↗</span>';btn.setAttribute('aria-label','Film unavailable');btn.disabled=true;}
+    });
+  });
+  if('IntersectionObserver' in window){
+    const videoObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+      const video=entry.target;
+      if(entry.isIntersecting){if(!reducedMotion){loadVideo(video);playVideo(video);}}
+      else if(!video.paused)video.pause();
+    }),{rootMargin:'180px 0px',threshold:.12});
+    videos.forEach(video=>videoObserver.observe(video));
+  } else videos.forEach(video=>{loadVideo(video);if(!reducedMotion)playVideo(video);});
+  // Failed images remove their whole visual card/section rather than leaving an empty frame.
+  $$('img').forEach(img=>{
+    const fail=()=>{
+      if(img.id==='brandLogo'){img.style.display='none';const fallback=$('#brandFallback');if(fallback)fallback.style.display='block';return;}
+      const card=img.closest('[data-visual-card]');if(card){card.remove();return;}img.remove();
+    };
+    img.addEventListener('error',fail,{once:true});
+    if(img.complete&&img.naturalWidth===0)fail();
+  });
+  // Back-to-top appears only after the visitor starts exploring.
+  const backToTop=$('#backToTop');
+  function updateBackToTop(){backToTop?.classList.toggle('visible',window.scrollY>700);}
+  window.addEventListener('scroll',updateBackToTop,{passive:true});updateBackToTop();
+  backToTop?.addEventListener('click',()=>window.scrollTo({top:0,behavior:reducedMotion?'auto':'smooth'}));
+  // Subtle editorial reveals: content remains visible if animation APIs are unavailable.
+  if('IntersectionObserver' in window && !reducedMotion){
+    const revealTargets=$$('.section-head, .arrival-grid, .editorial-story, .category-grid, .signature-section, .feature-grid, .partner-band');
+    revealTargets.forEach(el=>el.classList.add('reveal-item'));
+    const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add('is-revealed');revealObserver.unobserve(entry.target);}
+    }),{rootMargin:'0px 0px -5% 0px',threshold:.08});
+    revealTargets.forEach(el=>revealObserver.observe(el));
+  }
+  $('#year').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
